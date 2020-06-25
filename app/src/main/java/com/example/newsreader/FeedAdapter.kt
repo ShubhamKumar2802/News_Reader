@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 
 var linkNews: String = "Empty String for now"
 
@@ -47,14 +48,19 @@ class FeedAdapter(context: Context, val resource: Int, val applications: List<Fe
         viewHolder.tvPublishDate.text = currentApp.publishDate
         viewHolder.tvDescription.text = currentApp.description
         viewHolder.tvLink.text = currentApp.link
-//        linkNews = currentApp.link
         Log.d(TAG, "getView: link is ${currentApp.link} **********")
-        Log.d(TAG, "getView: linkNews is $linkNews")
 
+
+        // OnClickListener for each view
+        Log.d(TAG, "Above OnClickListener")
         view.setOnClickListener {
-            val intent = Intent().apply {
+            Log.d(TAG, "OnCLickListener: called")
+            val intentNews = Intent().apply {
+                action = Intent.ACTION_VIEW
                 data = Uri.parse(currentApp.link)
             }
+            Log.d(TAG, "OnClickListener: Done, Intent about to start")
+            startActivity(it.context, intentNews, null)
         }
 
         return view
