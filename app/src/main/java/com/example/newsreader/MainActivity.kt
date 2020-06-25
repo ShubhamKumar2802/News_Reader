@@ -1,18 +1,13 @@
 package com.example.newsreader
 
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.AdapterView
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.news_adapter_layout.*
 import java.net.URL
 import kotlin.properties.Delegates
 
@@ -99,48 +94,9 @@ class MainActivity : AppCompatActivity() {
         }
         downloadUrl(feedUrl)
 
-
-//         OnClickListener for ListView
-//        if(feedUrl == "https://timesofindia.indiatimes.com/rssfeedstopstories.cms") {
-//        lvMain.setOnItemClickListener { parent, view, position, id ->
-//            Log.d(TAG, "setOnItemClickListener: called")
-//            parent = AdapterView<FeedAdapter().context>
-//            if(position == 0) {
-//                val intentNews = Intent().apply {
-//                    action = Intent.ACTION_VIEW
-//                    putExtra("position", position)
-//                    data = Uri.parse("https://www.google.com")
-//                    Log.d(TAG, "IntentNews done")
-//                }
-//                startActivity(intentNews)
-//            }
-//        }
-
-//        }
-
     }
 
-    override fun onStart() {
-        super.onStart()
-        Log.d(TAG, "OnStart: called")
-        Log.d(TAG, "Link is ${tvLink?.text}")
 
-        lvMain.onItemClickListener = object : AdapterView.OnItemClickListener {
-            override fun onItemClick(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-//                TODO("Not yet implemented")
-                val intent = Intent().apply {
-                    action = Intent.ACTION_VIEW
-                    data = Uri.parse("https://www.google.com")
-                }
-                startActivity(intent)
-            }
-        }
-    }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
