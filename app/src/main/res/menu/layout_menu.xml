@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-<!--    <item-->
-<!--        android:id="@+id/News"-->
-<!--        android:icon="@drawable/ic_news"-->
-<!--        android:title="News"/>-->
+    <!--    <item-->
+    <!--        android:id="@+id/News"-->
+    <!--        android:icon="@drawable/ic_news"-->
+    <!--        android:title="News"/>-->
 
-<!--    <item-->
-<!--        android:id="@+id/Videos"-->
-<!--        android:icon="@drawable/ic_video"-->
-<!--        android:title="Videos"/>-->
+    <!--    <item-->
+    <!--        android:id="@+id/Videos"-->
+    <!--        android:icon="@drawable/ic_video"-->
+    <!--        android:title="Videos"/>-->
 
-<!--    -->
+    <!--    -->
     <item
         android:id="@+id/topStories"
-        android:title="Top Stories"/>
+        android:title="Top Stories" />
 
     <item
         android:id="@+id/entertainment"
-        android:title="Entertainment"/>
-
+        android:title="Entertainment" />
 
 
     <item
         android:id="@+id/sports"
-        android:title="Sports"/>
+        android:title="Sports" />
 
     <item
         android:id="@+id/lifestyle"
-        android:title="Life Style"/>
+        android:title="Life Style" />
 
     <item
-    android:id="@+id/business"
-    android:title="Business"/>
+        android:id="@+id/business"
+        android:title="Business" />
 
     <item
         android:id="@+id/auto"
-        android:title="Auto"/>
+        android:title="Auto" />
 
 
 </menu>
